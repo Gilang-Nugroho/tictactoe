@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- start game page -->
+    <div class="containerStartGame" id="containerStartGame">
+      <div class="title">
+        <img src="images/tic-tac-toe (1).png" alt="" />
+        <h1>Tic-Tac-Toe</h1>
+      </div>
+
+      <div class="buttons">
+        <button onclick="playGame()">Play Game</button>
+        <button onclick="displayRules()">Game Rules</button>
+      </div>
+    </div>
+
+    <!-- playing game display -->
+    <div class="containerPlaying" id="containerPlaying">
+      <div class="home" onclick="returnToHome()">
+        <img src="images/home.png" alt="" />
+      </div>
+
+      <div class="containerScore">
+        <div class="playerScore">
+          <img src="images/close.png" alt="" />
+          <p id="playerCounterScore">You: 0</p>
+        </div>
+
+        <div class="opponentScore">
+          <img src="/images/circle.png" alt="" />
+          <p id="botCounterScore">Bot: 0</p>
+        </div>
+      </div>
+
+      <h1 id="titleOfTurn"></h1>
+
+      <div class="containerChoice">
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+      </div>
+
+      <div class="reset">
+        <button id="restartGame" onclick="restartDisplayGame()">
+          Restart Game
+        </button>
+      </div>
+    </div>
+
+    <!-- game rules -->
+    <div class="containerRules" id="gameRules">
+      <div class="returnHomeButton">
+        <button onclick="exitGameRules()">
+          <img src="images/left-arrow (1).png" alt="" />
+        </button>
+      </div>
+
+      <div class="titleRules">
+        <h1>Game Rules</h1>
+      </div>
+
+      <div class="containerWin">
+        <div class="subContainerWin">
+          <div class="tropy">
+            <img src="images/trophy.png" alt="" />
+          </div>
+
+          <div class="detailRules">
+            <h3>WIN</h3>
+            <p>Get 3 marks in a row,</p>
+            <p>Player wins, game ends.</p>
+          </div>
+        </div>
+
+        <div class="gradientLine"></div>
+      </div>
+
+      <div class="containerLose">
+        <div class="subContainerLose">
+          <div class="dislike">
+            <img src="images/dislike.png" alt="" />
+          </div>
+
+          <div class="detailRules">
+            <h3>DEFEAT</h3>
+            <p>Opponent Get 3 marks in a row,</p>
+            <p>Player wins, game ends.</p>
+          </div>
+        </div>
+
+        <div class="gradientLine"></div>
+      </div>
+
+      <div class="containerDraw">
+        <div class="subContainerDraw">
+          <div class="handshake">
+            <img src="images/handshake.png" alt="" />
+          </div>
+
+          <div class="detailRules">
+            <h3>DRAW</h3>
+            <p>Boards full, no 3 in a row,</p>
+            <p>No winner, game ends.</p>
+          </div>
+        </div>
+
+        <div class="gradientLine"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
