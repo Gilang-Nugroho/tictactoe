@@ -98,7 +98,7 @@ function computerPick() {
       return;
     }
 
-    // currentPlayer = isPlayerTurn() ? "O" : "X";
+    currentPlayer = isPlayerTurn() ? "O" : "X";
   }, 1000);
 }
 
